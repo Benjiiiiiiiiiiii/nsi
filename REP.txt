@@ -1,0 +1,33 @@
+3.3 :
+
+SELECT `TITRE` AS Nom_du_Film, `NOM_ROLE` AS Nom_du_Role
+FROM `films`
+JOIN `roles` ON `ID` = `ID_FILM`
+WHERE `NOM_ROLE` = 'Norman Osborn'
+
+3.4 :
+
+SELECT `TITRE` AS Nom_du_Film, `NOM_ROLE` AS Nom_du_Role, `NOM` as Nom_acteur, `PRENOM` as Prenom_Acteur
+FROM `films`
+JOIN `roles` ON films.ID = roles.ID_FILM
+join `artistes` ON roles.ID_ACTEUR = artistes.ID
+WHERE `NOM_ROLE` = 'Léon'
+
+3.5:
+
+SELECT `TITRE` AS Nom_du_Film, `NOM_ROLE` AS Nom_du_Role, `NOM` as Nom_réalisateur, `PRENOM` as Prenom_réalisateur
+FROM `films`
+JOIN `roles` ON films.ID = roles.ID_FILM
+join `artistes` ON films.ID_REALISATEUR = artistes.ID
+WHERE `TITRE` = 'Titanic'
+
+3.6 :
+
+SELECT `TITRE` AS Nom_du_Film, `NOM_ROLE` AS Nom_du_Role, `NOM` as Nom_acteur, `PRENOM` as Prenom_Acteur
+FROM `films`
+JOIN `roles` ON films.ID = roles.ID_FILM
+join `artistes` ON roles.ID_ACTEUR = artistes.ID
+
+3.7:
+
+regarde le fichier word ya la correction.
